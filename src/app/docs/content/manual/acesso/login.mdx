@@ -1,0 +1,41 @@
+---
+title: "Acesso e Login"
+description: "Guia para acessar e realizar login na interface web do APTWEB."
+---
+
+import { LogIn } from 'lucide-react';
+import Image from 'next/image';
+import { Callout } from '@/components/mdx-callout';
+
+### <span className="inline-flex items-center gap-2"><LogIn size={20} /> Realizando Login</span>
+
+O acesso à interface WEB é feito via URL de acesso correspondente ao deploy realizado no servidor de aplicação.
+
+Para acessar a plataforma APTWEB:
+1. Obtenha a URL de acesso com o administrador do sistema.
+2. Utilize suas credenciais corporativas (login e senha da rede).
+3. Acesse através de qualquer navegador moderno.
+
+<Callout type="info" title="Atenção!">
+    A autenticação do login é feita via LDAP (<em>Lightweight Directory Access Protocol</em>), fornecendo um login único de acesso, sendo este geralmente o login utilizado para acessar a rede.
+</Callout>
+
+#### Tela de Login
+
+<div className="my-6">
+  <Image 
+    src="/images/docs/interface-web/login/tela_inicial_login.png" 
+    alt="Tela de Login APTWEB"
+    width={800} 
+    height={450}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 1: Tela inicial de Login</p>
+</div>
+
+Fluxo de autenticação:
+1. Insira seu usuário corporativo.
+2. Digite sua senha.
+3. Pressione `Enter` ou clique no botão de acesso.
+
+
