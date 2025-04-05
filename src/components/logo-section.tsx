@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { getPath } from "@/utils/get-path";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -40,8 +41,8 @@ export function LogoSection({
 				<Image
 					src={
 						resolvedTheme === "dark"
-							? "/images/APT_BW.png"
-							: "/images/APT_Black.png"
+							? getPath("/images/APT_BW.png")
+							: getPath("/images/APT_Black.png")
 					}
 					alt="Logo"
 					width={logoSize}

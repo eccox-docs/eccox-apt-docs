@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ModeToggle } from "./mode-toggle";
 
+import { getPath } from "@/utils/get-path";
 import { LogoSection } from "./logo-section";
 import { Button } from "./ui/button";
 
@@ -41,7 +42,7 @@ export function DocHeader({ children }: DocHeaderProps) {
 						<Button variant="ghost" size="sm" asChild>
 							<div>
 								<Image
-									src="/images/Logotipo_600x550.v2.png"
+									src={getPath("/images/Logotipo_600x550.v2.png")}
 									alt="Logo"
 									width={16}
 									height={16}

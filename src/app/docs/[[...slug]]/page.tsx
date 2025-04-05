@@ -4,7 +4,7 @@ import { EditPage } from "@/components/doc-edit-page";
 import { DocLayout } from "@/components/doc-layout";
 import { useMDXComponents } from "@/components/mdx/use-mdx-components";
 import { Separator } from "@/components/ui/separator";
-import { getStaticMdxParams } from "@/lib/get-static-mdx-params";
+import { getStaticMdxParams } from "@/utils/get-static-mdx-params";
 import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
 import NotContent from "../content/not-content";
