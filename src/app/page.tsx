@@ -71,7 +71,10 @@ export default function Home() {
 									Conheça os novos comandos e melhorias implementadas na última
 									atualização do APT
 								</p>
-								<Button asChild className="w-full">
+								<Button
+									asChild
+									className="w-full text-white bg-blue-600 hover:bg-blue-700"
+								>
 									<Link href="/docs/guides">
 										<span>Ver Novidades</span>
 										<ArrowRight className="ml-2 h-4 w-4" />
@@ -157,8 +160,6 @@ export default function Home() {
 								</Button>
 							</CardContent>
 						</Card>
-
-
 					</div>
 				</div>
 			</div>
