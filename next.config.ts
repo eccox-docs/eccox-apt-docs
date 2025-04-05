@@ -1,21 +1,32 @@
 import withMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig: NextConfig = withMDX({
-	extension: /\.mdx?$/,
-	options: {
-		remarkPlugins: [],
-		rehypePlugins: [],
-		providerImportSource: "@mdx-js/react",
-	},
-})({
-	reactStrictMode: true,
-	pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-	output: "export", //Exportação estática para GitHub Pages
-	images: {
-		unoptimized: true, //Necessário para exportação estática
-	},
+// Detecta ambiente de produção
+const isProd = process.env.NODE_ENV === "production";
+
+// Configuração do MDX
+const withMDXConfig = withMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+    providerImportSource: "@mdx-js/react"
+  }
 });
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+
+  // Usa exportação estática apenas em produção
+  ...(isProd && {
+    output: "export",
+    images: {
+      unoptimized: true
+    }
+  })
+};
+
+// Exporta a configuração final
+export default withMDXConfig(nextConfig);
