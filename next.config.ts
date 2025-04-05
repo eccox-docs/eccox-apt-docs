@@ -7,24 +7,25 @@ const withMDX = require("@next/mdx")({
 	},
 });
 
-// Detecta ambiente de produção
+// Detecta se é build de produção
 const isProd = process.env.NODE_ENV === "production";
+
+// Lê basePath da variável de ambiente (usada no .env.production e .env.local)
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
 	pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 
-	// Adiciona basePath e assetPrefix apenas em produção
 	...(isProd && {
 		output: "export",
-		basePath: "/eccox-apt-docs",
-		assetPrefix: "/eccox-apt-docs",
+		basePath,
+		assetPrefix: basePath,
 		images: {
-			unoptimized: true,
+			unoptimized: true, // necessário para export com next/image
 		},
 	}),
 };
 
-// Exporta a configuração final
 module.exports = withMDX(nextConfig);

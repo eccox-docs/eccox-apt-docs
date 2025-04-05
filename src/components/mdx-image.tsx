@@ -6,8 +6,7 @@ interface MdxImageProps extends Omit<ImageProps, "src"> {
 
 export function MdxImage(props: MdxImageProps) {
 	const { src, ...rest } = props;
-	const basePath =
-		process.env.NODE_ENV === "production" ? "/eccox-apt-docs" : "";
+	const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 	const imageSrc = src.startsWith("/") ? `${basePath}${src}` : src;
 
 	return <Image {...rest} alt={props.alt || "Image"} src={imageSrc} />;
