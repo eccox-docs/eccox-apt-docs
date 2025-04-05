@@ -1,0 +1,77 @@
+name: Bug Report
+description: Crie um relatório para nos ajudar a melhorar
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - DiogoEccox
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por dedicar seu tempo para preencher este bug report!
+
+  - type: input
+    id: version
+    attributes:
+      label: Versão
+      description: Qual versão você está usando?
+      placeholder: ex. 1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Navegadores afetados
+      description: Em quais navegadores você encontrou o problema?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: O que aconteceu?
+      description: Descreva também o que você esperava que acontecesse.
+      placeholder: Descreva o problema detalhadamente
+      value: "Ocorreu um problema quando..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Passos para reproduzir
+      description: Como podemos reproduzir esse problema?
+      placeholder: |
+        1. Vá para '...'
+        2. Clique em '....'
+        3. Role até '....'
+        4. Veja o erro
+      value: |
+        1. Vá para '...'
+        2. Clique em '....'
+        3. Role até '....'
+        4. Veja o erro
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs relevantes
+      description: Cole qualquer log ou mensagem de erro relevante aqui
+      render: shell
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Termos
+      description: Ao enviar este relatório, você confirma que verificou se não existe um issue similar já aberto
+      options:
+        - label: Verifiquei que não existe um relatório similar para este problema
+          required: true

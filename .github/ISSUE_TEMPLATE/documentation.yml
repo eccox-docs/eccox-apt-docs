@@ -1,0 +1,63 @@
+name: Documentação
+description: Sugestões ou problemas relacionados à documentação
+title: "[Docs]: "
+labels: ["documentation"]
+assignees:
+  - DiogoEccox
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por ajudar a melhorar nossa documentação!
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Tipo de problema
+      description: Qual é o tipo de problema com a documentação?
+      options:
+        - Informação incorreta
+        - Informação ausente
+        - Informação desatualizada
+        - Erro de formatação
+        - Erro ortográfico/gramatical
+        - Outro
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Localização
+      description: Onde está a documentação que precisa ser atualizada?
+      placeholder: URL ou caminho do arquivo
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Conteúdo atual
+      description: O que está escrito atualmente (se aplicável)?
+      placeholder: A documentação atual diz...
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Sugestão de alteração
+      description: Como você sugere que a documentação seja alterada?
+      placeholder: Sugiro que seja alterado para...
+      value: "O texto deveria explicar que..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Motivo
+      description: Por que essa alteração é necessária?
+      placeholder: Esta alteração é importante porque...
+    validations:
+      required: false

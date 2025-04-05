@@ -1,0 +1,60 @@
+name: Solicitação de Funcionalidade
+description: Sugira uma ideia para este projeto
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees:
+  - DiogoEccox
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por contribuir com ideias para a melhoria do nosso projeto!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema relacionado
+      description: Sua solicitação de recurso está relacionada a um problema? Por favor, descreva.
+      placeholder: Fico frustrado quando [...]
+    validations:
+      required: false
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solução desejada
+      description: Descreva a solução que você gostaria
+      placeholder: Eu gostaria que [...]
+      value: "Seria útil se o sistema pudesse..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: Descreva alternativas que você considerou
+      placeholder: Pensei também em [...]
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto adicional
+      description: Adicione qualquer outro contexto ou capturas de tela sobre a solicitação de recurso aqui.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade
+      description: Qual você considera ser a prioridade desta funcionalidade?
+      options:
+        - Baixa
+        - Média
+        - Alta
+        - Crítica
+    validations:
+      required: true
