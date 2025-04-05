@@ -62,7 +62,7 @@ export function LogoSection({
 				<div className="flex items-center justify-center gap-2">
 					<div className="flex size-6 items-center justify-center rounded-[4px] bg-[#d5efff]">
 						<Image
-							src="/images/IconDocumentation.svg"
+							src={getPath("/images/IconDocumentation.svg")}
 							alt="Ícone de Documentação"
 							width={iconSize}
 							height={iconSize}

@@ -47,7 +47,13 @@ export function DocHeader({ children }: DocHeaderProps) {
 									width={16}
 									height={16}
 								/>
-								<Link href="https://www.eccox.com/pt">Eccox</Link>
+								<Link
+									href="https://www.eccox.com/pt"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Eccox
+								</Link>
 							</div>
 						</Button>
 					</div>
