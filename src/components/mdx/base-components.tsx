@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
-import { Callout } from "../callout";
+import { MdxCallout } from "../mdx-callout";
+import { MdxImage } from "../mdx-image";
 
 export const baseComponents = {
-	Image,
 	Link,
-	Callout,
+	MdxCallout,
+	MdxImage,
 	h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
 		<h1
 			className={cn(

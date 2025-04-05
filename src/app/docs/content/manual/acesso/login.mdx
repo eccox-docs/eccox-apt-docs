@@ -4,8 +4,8 @@ description: "Guia para acessar e realizar login na interface web do APTWEB."
 ---
 
 import { LogIn } from 'lucide-react';
-import Image from 'next/image';
-import { Callout } from '@/components/mdx-callout';
+import { MdxCallout } from '@/components/mdx-callout';
+import { MdxImage } from '@/components/mdx-image';
 
 ### <span className="inline-flex items-center gap-2"><LogIn size={20} /> Realizando Login</span>
 
@@ -16,14 +16,14 @@ Para acessar a plataforma APTWEB:
 2. Utilize suas credenciais corporativas (login e senha da rede).
 3. Acesse através de qualquer navegador moderno.
 
-<Callout type="info" title="Atenção!">
+<MdxCallout type="info" title="Atenção!">
     A autenticação do login é feita via LDAP (<em>Lightweight Directory Access Protocol</em>), fornecendo um login único de acesso, sendo este geralmente o login utilizado para acessar a rede.
-</Callout>
+</MdxCallout>
 
 #### Tela de Login
 
 <div className="my-6">
-  <Image 
+  <MdxImage 
     src="/images/docs/interface-web/login/tela_inicial_login.png" 
     alt="Tela de Login APTWEB"
     width={800} 

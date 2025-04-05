@@ -1,32 +1,30 @@
-import withMDX from "@next/mdx";
-import type { NextConfig } from "next";
+const withMDX = require("@next/mdx")({
+	extension: /\.mdx?$/,
+	options: {
+		remarkPlugins: [],
+		rehypePlugins: [],
+		providerImportSource: "@mdx-js/react",
+	},
+});
 
 // Detecta ambiente de produção
 const isProd = process.env.NODE_ENV === "production";
 
-// Configuração do MDX
-const withMDXConfig = withMDX({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-    providerImportSource: "@mdx-js/react"
-  }
-});
-
 /** @type {import('next').NextConfig} */
-const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+const nextConfig = {
+	reactStrictMode: true,
+	pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 
-  // Usa exportação estática apenas em produção
-  ...(isProd && {
-    output: "export",
-    images: {
-      unoptimized: true
-    }
-  })
+	// Adiciona basePath e assetPrefix apenas em produção
+	...(isProd && {
+		output: "export",
+		basePath: "/eccox-apt-docs",
+		assetPrefix: "/eccox-apt-docs",
+		images: {
+			unoptimized: true,
+		},
+	}),
 };
 
 // Exporta a configuração final
-export default withMDXConfig(nextConfig);
+module.exports = withMDX(nextConfig);
