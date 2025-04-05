@@ -9,7 +9,7 @@ Obrigado pelo interesse em contribuir com a documentação do Eccox APT! Este gu
 Se você encontrou um erro na documentação ou tem uma sugestão de melhoria:
 
 1. Verifique se o problema já não foi reportado na seção de [Issues](https://github.com/DiogoEccox/eccox-apt-docs/issues)
-2. Se não encontrar nada relacionado, [crie uma nova issue](https://github.com/DiogoEccox/eccox-apt-docs/issues/new)
+2. Se não encontrar nada relacionado, [crie uma nova issue](https://github.com/DiogoEccox/eccox-apt-docs/issues/new/choose)
    - Use um título descritivo
    - Forneça o máximo de detalhes possível, incluindo a localização exata do problema
    - Sugira uma correção, se possível
