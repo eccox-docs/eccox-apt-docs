@@ -76,7 +76,7 @@ const categories: NavigationCategory[] = [
 						href: "/docs/manual/container-criacao/criacao",
 					},
 					{
-						title: "Novo Plano de Teste",
+						title: "Criar Plano de Teste",
 						href: "/docs/manual/container-criacao/plano",
 					},
 				],
