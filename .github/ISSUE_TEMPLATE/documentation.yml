@@ -1,9 +1,10 @@
 name: Documentação
+
 description: Sugestões ou problemas relacionados à documentação
 title: "[Docs]: "
 labels: ["documentation"]
 assignees:
-  - DiogoEccox
+  - eccox-docs
 body:
   - type: markdown
     attributes:

@@ -1,9 +1,10 @@
 name: Solicitação de Funcionalidade
+
 description: Sugira uma ideia para este projeto
 title: "[Feature]: "
 labels: ["enhancement"]
 assignees:
-  - DiogoEccox
+  - eccox-docs
 body:
   - type: markdown
     attributes:

@@ -30,7 +30,7 @@ export default async function DocPage({ params }: any) {
 			components: useMDXComponents({}),
 		});
 
-		const githubEditUrl = `https://github.com/DiogoEccox/eccox-apt-docs/edit/main/src/app/docs/content/${slugPath}.mdx`;
+		const githubEditUrl = `https://github.com/eccox-docs/eccox-apt-docs/edit/main/src/app/docs/content/${slugPath}.mdx`;
 
 		return (
 			<DocLayout>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/DiogoEccox/eccox-apt-docs/main/public/logo-header-readme/logo.png" alt="Logo Eccox APT" width="300" />
+  <img src="https://raw.githubusercontent.com/eccox-docs/eccox-apt-docs/main/public/logo-header-readme/logo.png" alt="Logo Eccox APT" width="300" />
 </p>
 
 

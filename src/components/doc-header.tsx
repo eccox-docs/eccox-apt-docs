@@ -59,7 +59,7 @@ export function DocHeader({ children }: DocHeaderProps) {
 					</div>
 					<Button variant="ghost" size="icon" asChild>
 						<a
-							href="https://github.com/DiogoEccox/eccox-apt-docs"
+							href="https://github.com/eccox-docs/eccox-apt-docs"
 							target="_blank"
 							rel="noopener noreferrer"
 						>

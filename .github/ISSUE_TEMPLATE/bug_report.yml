@@ -1,9 +1,10 @@
 name: Bug Report
+
 description: Crie um relatório para nos ajudar a melhorar
 title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees:
-  - DiogoEccox
+  - eccox-docs
 body:
   - type: markdown
     attributes:

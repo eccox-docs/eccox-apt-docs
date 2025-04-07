@@ -153,7 +153,7 @@ export default function Home() {
 								</p>
 								<Button asChild variant="outline" className="w-full">
 									<a
-										href="https://github.com/DiogoEccox/eccox-apt-docs"
+										href="https://github.com/eccox-docs/eccox-apt-docs"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
