@@ -13,7 +13,6 @@ import {
 	Github,
 	GraduationCap,
 	History,
-	Laptop,
 	Rocket,
 } from "lucide-react";
 import Link from "next/link";

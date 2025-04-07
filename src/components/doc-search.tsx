@@ -1,6 +1,6 @@
 "use client";
 
-import { FileSearch, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 

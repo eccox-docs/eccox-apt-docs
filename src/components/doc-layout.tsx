@@ -2,7 +2,6 @@
 
 import type React from "react";
 
-import { Menu } from "lucide-react";
 import { useState } from "react";
 import { DocHeader } from "./doc-header";
 import { FloatingMenuButton } from "./floating-menu-button";

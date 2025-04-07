@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import { LogoSection } from "../logo-section";
 import type { SidebarHeaderProps } from "./types";
 
