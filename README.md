@@ -1,52 +1,76 @@
-# Eccox APT - Documentação Oficial
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DiogoEccox/eccox-apt-docs/main/public/logo-header-readme/logo.png" alt="Logo Eccox APT" width="300" />
+</p>
 
-Este repositório contém a documentação oficial do **Eccox Application Environment Management for Parallel Testing** (APT), uma solução para gestão de ambientes de teste paralelos em mainframe.
 
-## Sobre o Projeto
+<h1 align="center">Eccox APT – Application Environment Management for Parallel Testing</h1>
 
-Esta documentação é desenvolvida usando Next.js e MDX, proporcionando uma experiência moderna e interativa para consulta ao manual do APT. O conteúdo abrange desde conceitos básicos até técnicas avançadas de configuração e uso do sistema.
+<p align="center">
+  Central de documentação técnica para testes paralelos no mainframe z/OS.
+</p>
 
-## Acessando a Documentação
+---
 
-A documentação está disponível online em: [https://github.com/DiogoEccox/eccox-apt-docs](https://DiogoEccox.github.io/eccox-apt-docs)
+## 📘 Visão Geral
 
-## Estrutura do Conteúdo
+O APT permite a criação de **containers de testes isolados**, otimizando a esteira de entregas nos processos **Agile** e **DevOps**. Com ele, é possível montar ambientes seguros e eficientes para múltiplos projetos simultaneamente, sem conflitos de infraestrutura e com redução na dependência de equipes de suporte técnico (como CICS, IMS ou DBA).
 
-- **Manual de Utilização** - Guias detalhados para diferentes perfis de usuário
-- **Configuração Técnica** - Detalhamento de ambientes CICS, IMS, DB2 e fluxos de trabalho
-- **Referências** - Glossário e recursos adicionais
+---
 
-## Contribuindo
+## 🚀 Recursos principais
 
-Contribuições são bem-vindas! Veja nosso [Guia de Contribuição](CONTRIBUTING.md) para mais detalhes sobre como participar.
+- **Gestão de Ambientes de Teste** no z/OS (unitário, integrado, homologação)
+- Criação e limpeza automatizada de infraestrutura de testes
+- Arquitetura altamente configurável sem necessidade de alterar o código-fonte
+- Integração com tecnologias como DB2, CICS, IMS e MQ for z/OS
+- Padronização dos processos e reuso de Planos de Teste
+- Interface online amigável com múltiplos níveis de acesso
 
-## Executando Localmente
+---
 
-```bash
-# Clone o repositório
-git clone https://github.com/DiogoEccox/eccox-apt-docs.git
+## 📚 Estrutura da Documentação
 
-# Navegue até o diretório
-cd eccox-apt-docs
+Explore os menus laterais para acessar conteúdos por categoria:
 
-# Instale as dependências
-npm install
+- **Guias Técnicos** → Entenda os fundamentos e a arquitetura do APT
+- **Tutoriais** → Passo a passo para configurar e executar ambientes
+- **Vídeo Aulas** → Demonstrações práticas em formato audiovisual
+- **Exercícios Práticos** → Testes para reforçar o aprendizado
+- **Registro de Alterações** → Histórico de versões do produto
+- **Novidades** → Informações sobre recursos em desenvolvimento
 
-# Inicie o servidor de desenvolvimento
-npm run dev
-```
+---
 
-## Tecnologias
+## 👨‍💻 Para quem é este projeto?
 
-- Next.js
-- TypeScript
-- MDX
-- Tailwind CSS
+Este repositório é indicado para:
 
-## Licença
+- Testadores e analistas QA que utilizam ambientes mainframe
+- Equipes DevOps que desejam integrar o APT às suas pipelines
+- Usuários técnicos que precisam configurar e manter ambientes de testes paralelos
+- Novos usuários em busca de aprendizado sobre a solução APT
 
-Este projeto está licenciado sob [MIT License](LICENSE) - veja o arquivo LICENSE para detalhes.
+---
 
-## Contato
+## 🛠️ Tecnologias utilizadas
 
-Para dúvidas ou sugestões sobre o produto, entre em contato com [support@eccox.com](mailto:support@eccox.com).
+- [Next.js](https://nextjs.org/)
+- [MDX](https://mdxjs.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide React](https://lucide.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 📄 Licença
+
+Este projeto é mantido por Eccox Software S.A. e distribuído sob licença proprietária. O conteúdo desta documentação é de uso interno e/ou autorizado sob acordo com a empresa.
+
+---
+
+## 📞 Contato
+
+Para dúvidas, sugestões ou contribuições, entre em contato com a equipe técnica da **Eccox Software** por meio dos canais oficiais de suporte.
+
+---
+
