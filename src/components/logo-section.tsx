@@ -38,17 +38,27 @@ export function LogoSection({
 		<div className={cn("flex items-center gap-4 p-1.5", className)}>
 			{/* Logo e versão */}
 			<div className="flex items-center justify-center gap-2">
-				<Image
-					src={
-						resolvedTheme === "dark"
-							? getPath("/images/APT_BW.png")
-							: getPath("/images/APT_Black.png")
-					}
-					alt="Logo"
-					width={logoSize}
-					height={logoSize}
-					priority
-				/>
+				<div className="relative">
+					{/* Logo para tema claro */}
+					<Image
+						src={getPath("/images/APT_Black.png")}
+						alt="Logo Light"
+						width={logoSize}
+						height={logoSize}
+						className="block dark:hidden"
+						priority
+					/>
+
+					{/* Logo para tema escuro */}
+					<Image
+						src={getPath("/images/APT_BW.png")}
+						alt="Logo Dark"
+						width={logoSize}
+						height={logoSize}
+						className="hidden dark:block"
+						priority
+					/>
+				</div>
 				<span className="text-2xl font-bold">APT</span>
 				{version && (
 					<span className="text-sm font-medium text-muted-foreground">

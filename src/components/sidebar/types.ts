@@ -98,6 +98,7 @@ export interface GrandchildrenItemsProps {
 		onClick: () => void,
 		children: ReactNode,
 	) => ReactNode;
+	expandedItems: string[];
 }
 
 // Utilitário de renderização de nav item

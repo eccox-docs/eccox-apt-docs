@@ -9,12 +9,12 @@ import {
 } from "@/components/ui/card";
 import {
 	ArrowRight,
-	FileCode,
+	BookOpen,
 	Github,
+	GraduationCap,
+	History,
 	Laptop,
-	Lightbulb,
 	Rocket,
-	Terminal,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -39,18 +39,22 @@ export default function Home() {
 						</div>
 						<div className="flex-1">
 							<h3 className="font-semibold text-blue-700 dark:text-blue-300">
-								Nova versão do APT em desenvolvimento
+								Novidades da próxima atualização do APT
 							</h3>
 							<p className="text-blue-600 dark:text-blue-400">
-								Acompanhe o progresso e descubra as novidades antes do
-								lançamento.
+								Confira os recursos e melhorias que estão chegando na versão{" "}
+								<strong>v2.0.7.6</strong> do APT.
 							</p>
 						</div>
 						<Button
+							asChild
 							variant="outline"
 							className="bg-white dark:bg-blue-900 border-blue-200 dark:border-blue-700 text-blue-600 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-800"
 						>
-							Saiba mais <ArrowRight className="ml-2 h-4 w-4" />
+							<Link href="/docs/novidades">
+								<span>Ver Novidades</span>
+								<ArrowRight className="ml-2 h-4 w-4" />
+							</Link>
 						</Button>
 					</div>
 
@@ -59,24 +63,24 @@ export default function Home() {
 						<Card>
 							<CardHeader>
 								<CardTitle className="flex items-center gap-2">
-									<Terminal className="h-5 w-5" />
-									<span>Novo Recurso Disponível</span>
+									<History className="h-5 w-5" />
+									<span>Consulte o histórico de versões do APT</span>
 								</CardTitle>
 								<CardDescription>
-									Explore as funcionalidades mais recentes do APT
+									Descubra as novidades e melhorias de cada versão
 								</CardDescription>
 							</CardHeader>
 							<CardContent className="space-y-4">
 								<p>
-									Conheça os novos comandos e melhorias implementadas na última
-									atualização do APT
+									Acompanhe o que mudou em cada versão, incluindo melhorias,
+									correções e novos recursos.
 								</p>
 								<Button
 									asChild
 									className="w-full text-white bg-blue-600 hover:bg-blue-700"
 								>
-									<Link href="/docs/guides">
-										<span>Ver Novidades</span>
+									<Link href="/docs/registro-de-alteracoes">
+										<span>Ver Versões</span>
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
 								</Button>
@@ -86,7 +90,7 @@ export default function Home() {
 						<Card>
 							<CardHeader>
 								<CardTitle className="flex items-center gap-2">
-									<FileCode className="h-5 w-5" />
+									<BookOpen className="h-5 w-5" />
 									<span>Guias</span>
 								</CardTitle>
 								<CardDescription>
@@ -99,7 +103,7 @@ export default function Home() {
 									todos os recursos do sistema APT.
 								</p>
 								<Button asChild variant="outline" className="w-full">
-									<Link href="/docs/guides">
+									<Link href="/docs/manual">
 										<span>Ver Guias</span>
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
@@ -112,21 +116,21 @@ export default function Home() {
 						<Card>
 							<CardHeader>
 								<CardTitle className="flex items-center gap-2">
-									<Laptop className="h-5 w-5" />
-									<span>Exemplos em Vídeo</span>
+									<GraduationCap className="h-5 w-5" />
+									<span>Aprenda a usar o APT</span>
 								</CardTitle>
 								<CardDescription>
-									Demonstrações práticas em vídeo para facilitar o aprendizado
+									Tudo que você precisa para dominar o ambiente de testes APT.
 								</CardDescription>
 							</CardHeader>
 							<CardContent className="space-y-4">
 								<p>
-									Assista a tutoriais em vídeo explicando o funcionamento do APT
-									na prática, com exemplos reais e dicas valiosas.
+									Aprenda com tutoriais, vídeos e exercícios práticos a criar e
+									gerenciar ambientes de testes com o APT.
 								</p>
 								<Button asChild variant="outline" className="w-full">
-									<Link href="/docs/video-examples">
-										<span>Assistir Vídeos</span>
+									<Link href="/docs/aprenda">
+										<span>Começar Agora</span>
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
 								</Button>
@@ -150,7 +154,7 @@ export default function Home() {
 								</p>
 								<Button asChild variant="outline" className="w-full">
 									<a
-										href="https://github.com/seu-usuario/apt-docs"
+										href="https://github.com/DiogoEccox/eccox-apt-docs"
 										target="_blank"
 										rel="noopener noreferrer"
 									>

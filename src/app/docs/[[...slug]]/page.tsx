@@ -36,10 +36,16 @@ export default async function DocPage({ params }: any) {
 			<DocLayout>
 				<div className="w-full py-10 px-4 md:px-6">
 					<div className="max-w-4xl mx-auto">
-						<div className="flex justify-between items-center mb-8">
-							<h1 className="text-3xl font-bold tracking-tight">
-								{data.title}
-							</h1>
+						<div className="flex justify-between items-center mb-4">
+							<div className="flex flex-col">
+								<h1 className="text-3xl font-bold tracking-tight mb-1">
+									{data.title}
+								</h1>
+								<p className="text-muted-foreground font-semibold">
+									{data.description}
+								</p>
+							</div>
+
 							<EditPage url={githubEditUrl} />
 						</div>
 						<Separator orientation="horizontal" />

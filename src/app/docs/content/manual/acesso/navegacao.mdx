@@ -1,0 +1,70 @@
+---
+title: "Navegação na Interface"
+description: "Guia sobre a navegação na interface do APTWEB."
+tags: ["manual", "navegacao", "interface"]
+---
+
+import { Menu, User, Settings, TerminalSquare } from 'lucide-react';
+import { MdxCallout } from '@/components/mdx-callout';
+import { MdxImage } from '@/components/mdx-image';
+import Link from 'next/link';
+
+### <span className="inline-flex items-center gap-2"><Menu size={20} /> Visão geral da tela principal</span>
+
+Após o login, a tela inicial do APTWEB será exibida.
+
+#### Tela Inicial
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/interface-web/navegacao/tela_inicial.png" 
+    alt="Tela inicial."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 2: Tela inicial do produto</p>
+</div>
+
+### <span className="inline-flex items-center gap-2 mb-4"><ListTree size={20} /> Estrutura de Navegação</span>
+
+<ul className="list-disc pl-6 space-y-2">
+  <li><strong>Barra Superior:</strong> Seletor de Idiomas, Notificações e Perfil do Usuário.</li>
+  <li><strong>Menu Lateral:</strong> Acesso a funcionalidades como Test Containers, Configurações e Segurança.</li>
+</ul>
+
+<div className="my-6">
+  <MdxImage 
+    src="/images/docs/interface-web/navegacao/menu_lateral.png" 
+    alt="Opções menu lateral"
+    width={800} 
+    height={450}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 3: Opções menu lateral.</p>
+</div>
+
+### <span className="inline-flex items-center gap-2 mb-4"><TerminalSquare size={20} />Principais Funcionalidades</span>
+
+    <ul className="list-disc pl-6 space-y-2 ">
+      <li><strong>Test Container:</strong> Criação e gerenciamento de containers de teste.</li>
+      <li><strong>Configuration:</strong> Gestão de regras, aplicações e alertas.</li>
+      <li><strong>Security:</strong> Definição de perfis e gerenciamento de usuários.</li>
+      <li><strong>Administration:</strong> Exibição e controle de identificadores únicos.</li>
+      <li><strong>Traces:</strong> Monitoramento e análise de logs CICS e IMS.</li>
+      <li><strong>Controles Gerais:</strong> Acesso à tela inicial, seleção de idiomas, alertas e logout.</li>
+    </ul>
+
+    Na navegação desse manual, você encontrará links para as seções correspondentes de cada funcionalidade.
+
+<div className="p-4 mt-6 bg-subtle rounded-lg">
+  <strong className="">Notas Técnicas:</strong>
+  <ul className="mt-2 list-disc pl-6">
+    <li>As permissões de acesso variam conforme o perfil do usuário</li>
+    <li>Idiomas suportados: Português, Inglês e Espanhol</li>
+  </ul>
+</div>
+
+<MdxCallout type="warning">
+  Sempre realize logout ao final das operações através do ícone de perfil no canto superior direito
+</MdxCallout>

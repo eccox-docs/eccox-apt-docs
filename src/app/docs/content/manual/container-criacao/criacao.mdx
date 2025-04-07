@@ -1,0 +1,87 @@
+---
+title: "Criação de Test Container"
+description: "Guia para criação de um novo container de teste no APTWEB."
+tags: ["manual", "test-container", "criação"]
+---
+
+import { MdxImage } from '@/components/mdx-image';
+import Link from 'next/link';
+
+Para criar um container de teste, expanda as opções de container no menu lateral e clique em **Test Container**. Em seguida, selecione a opção **Create** para exibir a tela de criação.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/create/container_create.png" 
+    alt="Tela de criação de um novo container de teste."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 4: Tela de criação de um novo container de teste.</p>
+</div>
+
+### Informações necessárias para criação
+
+Ao criar um novo container, forneça os seguintes dados:
+
+- **Test Container Name:** Descrição do container de teste.
+- **Environment:** Ambiente principal para instalação do container.
+- **Application:** Sistema ou aplicação ao qual o container pertence.
+- **Test Plan:** Plano de teste vinculado ao container. A lista de planos disponíveis depende do Environment e Application selecionados. Para mais detalhes sobre a criação de planos de teste, consulte <Link href="/docs/manual/container-criacao/plano" className="text-blue-600 underline">Criar plano de teste</Link>.
+
+Após preencher as informações, clique no botão **CREATE NEW CONTAINER** para finalizar a criação e ser redirecionado para o novo container.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/create/container_created.png" 
+    alt="Container de teste após criação inicial."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 5: Container de teste após criação inicial.</p>
+</div>
+
+> **Nota:** Os botões dos serviços buscadores podem variar conforme as features contratadas e acessos do usuário.
+
+### Acessando um container criado
+
+Os containers podem ser acessados a qualquer momento através da função **Browse**, disponível na opção **Test Container** do menu lateral. Dentro da lista de containers, utilize os botões de:
+
+- **Visualização ():** Para consulta dos detalhes do container.
+- **Edição ():** Para realizar alterações no container.
+
+Para mais informações sobre a função Browse, consulte a seção **Lista de containers**
+
+
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/create/container_list.png" 
+    alt="Lista de containers cadastrados."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 6: Lista de containers cadastrados (Browse).</p>
+</div>
+
+Para aprender como adicionar componentes ao container, consulte 
+<Link href="/docs/manual/componentes/adicionar" className="text-blue-600 underline">Adicionando componentes</Link>.
+
+### Criação de um novo plano de teste
+
+Para criar um novo plano de teste, as opções **Test Container Name** e **Environment** precisam estar preenchidas. Em seguida, clique no botão **+** mostrado na Figura 4 para exibir a pop-up da Figura 7.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/create/test_plan_popup.png" 
+    alt="Pop-up de criação de um plano de teste."
+    width={800}
+    height={500}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 7: Pop-up de criação de um plano de teste.</p>
+</div>
+
+Após preencher os campos necessários, confirme a criação do plano de teste e ele será adicionado automaticamente à lista disponível para o container.

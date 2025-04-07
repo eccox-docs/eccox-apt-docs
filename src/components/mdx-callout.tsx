@@ -12,7 +12,7 @@ interface CalloutProps {
 export function MdxCallout({ type = "info", title, children }: CalloutProps) {
 	const icons = {
 		info: <Info className="h-5 w-5 stroke-blue-500" />,
-		warning: <AlertTriangle className="h-5 w-5 stroke-rose-500" />,
+		warning: <AlertTriangle className="h-5 w-5 stroke-amber-500" />,
 		tip: <Lightbulb className="h-5 w-5 stroke-yellow-500" />,
 	};
 

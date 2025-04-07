@@ -1,0 +1,31 @@
+---
+title: "Criação de Plano de Teste"
+description: "Guia para criar um novo plano de teste no APTWEB."
+tags: ["manual", "test-plan", "criação"]
+---
+
+import { MdxImage } from '@/components/mdx-image';
+
+Para criar um novo plano de teste, as opções **Test Container Name** e **Environment** precisam estar preenchidas. Em seguida, clique no botão **+** mostrado na Figura 1 para exibir a pop-up de criação de um plano de teste.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/create/test_plan_popup.png" 
+    alt="Pop-up de criação de um plano de teste."
+    width={800}
+    height={500}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 1: Pop-up de criação de um plano de teste.</p>
+</div>
+
+#### Campos necessários para criação do plano de teste:
+
+- **Test Plan Name:** Nome do plano de teste.
+- **Description:** Descrição detalhada do plano de teste.
+- **Application:** Aplicação à qual o plano de teste estará associado.
+- **Environment:** Ambiente onde o plano de teste será executado.
+
+Após preencher os campos necessários, clique em **CREATE TEST PLAN** para salvar o plano. O novo plano será adicionado automaticamente à lista disponível para seleção ao criar um **Test Container**.
+
+Caso precise editar ou excluir um plano de teste, acesse a seção correspondente dentro do menu **Configuration**.

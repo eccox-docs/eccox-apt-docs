@@ -1,6 +1,5 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Link from "next/link";
-import { ReactNode } from "react";
 import { navigationConfig } from "./navigation-config";
 import { SectionItem } from "./section-item";
 import type { RenderNavItemFunction, SidebarSectionsProps } from "./types";

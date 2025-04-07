@@ -14,7 +14,7 @@ export default function NotContent() {
 				<p className="text-muted-foreground mb-6 max-w-md">
 					A página que você está procurando não existe ou foi movida.
 				</p>
-				<Button asChild>
+				<Button asChild className="dark:text-white ">
 					<Link href="/">Voltar para a página inicial</Link>
 				</Button>
 			</div>
