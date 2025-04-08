@@ -1,11 +1,112 @@
 ---
-title: "Em revisão final"
-description: "Este conteúdo está sendo preparado e estará disponível em breve."
-tags: ["em manutenção", "em construção", "revisão"]
+title: "Utilizando os Serviços Buscadores"
+description: "Utilize os serviços buscadores para localizar componentes no container de teste."
+tags: ["componentes", "buscadores", "container"]
 ---
 
-### <span className="inline-flex items-center gap-2"><Construction size={20} /> Em Construção</span>
+import { MdxImage } from '@/components/mdx-image';
+import { MdxCallout } from '@/components/mdx-callout';
 
-Este conteúdo está atualmente em fase de **construção** ou **revisão**.
+Os componentes podem ser adicionados utilizando os **serviços buscadores**, localizados na aba **Container Preparation** dentro da interface do container de teste, conforme mostrado abaixo:
 
-Volte mais tarde para acessar as informações completas ou entre em contato com o suporte para mais detalhes.
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos_buscadores.png"
+    alt="Interface da aba Container Preparation com os serviços buscadores."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 11: Serviços buscadores.</p>
+</div>
+
+> **Nota:** Os botões dos serviços buscadores podem variar de acordo com as features contratadas e os acessos de cada usuário.
+
+Esses serviços facilitam a busca e seleção de componentes, permitindo montar o container com agilidade. Para utilizar:
+
+1. Clique no botão referente ao serviço desejado.
+2. Forneça os dados para entrada da pesquisa.
+3. Visualize a lista de componentes retornados.
+
+### Origem dos Componentes
+
+Os componentes retornados podem ter origem:
+
+- **REM (Remoto):** Biblioteca de outra LPAR.
+- **LOC (Local):** Biblioteca da LPAR de origem.
+- **PRD (Produção):** Bibliotecas configuradas como produção.
+
+Cada origem é identificada conforme o comportamento do serviço buscador e a customização do ambiente.
+
+
+### Tipos de Serviços Buscadores Disponíveis
+
+Os serviços buscadores disponíveis são agrupados abaixo. Eles facilitam a busca e adição de componentes ao container e podem variar conforme a configuração do ambiente.
+
+<div className="overflow-x-auto my-4 rounded-lg border">
+  <table className="w-full text-sm text-left border rounded-lg overflow-hidden">
+    <thead className="bg-muted text-muted-foreground uppercase text-xs">
+      <tr>
+        <th className="px-4 py-3">Serviço</th>
+        <th className="px-4 py-3">Descrição</th>
+      </tr>
+    </thead>
+    <tbody className="divide-y">
+      <tr>
+        <td className="px-4 py-2 font-medium text-foreground">SCSM Discovery</td>
+        <td className="px-4 py-2">Pode ser configurado com <strong>CHANGEMAN®</strong> ou <strong>ENDEVOR® PACKAGE / ELEMENT</strong>.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-medium text-foreground">Library</td>
+        <td className="px-4 py-2">Busca por componentes em bibliotecas locais ou remotas.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-medium text-foreground">Transaction</td>
+        <td className="px-4 py-2">Localiza transações específicas no ambiente.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-medium text-foreground">Programs</td>
+        <td className="px-4 py-2">Busca por programas através de nomes ou padrões.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-medium text-foreground">Tables</td>
+        <td className="px-4 py-2">Busca por tabelas relacionadas aos componentes.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-medium text-foreground">JOBS</td>
+        <td className="px-4 py-2">Localiza scripts e jobs executáveis.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-medium text-foreground">DLI/DB</td>
+        <td className="px-4 py-2">Busca elementos relacionados ao banco de dados DLI/DB.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-medium text-foreground">Typing</td>
+        <td className="px-4 py-2">Classificação e mapeamento de tipos específicos de componentes.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-medium text-foreground">GIT</td>
+        <td className="px-4 py-2">Integração com repositórios Git para localizar versões de código.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-medium text-foreground">Typing for BDN FILE</td>
+        <td className="px-4 py-2">Tipagem especializada de arquivos BDN.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+### Substituição de Versão
+
+Caso um componente já esteja presente no container e seja necessário atualizá-lo:
+
+- Execute novamente o serviço buscador correspondente.
+- Solicite a substituição do componente encontrado.
+
+Para detalhes sobre a seleção de componentes encontrados, consulte:
+
+<MdxCallout type="link" title="Selecionar Componentes">
+ Acesse a página <Link href="/docs/manual/componentes/selecionar" className="text-blue-600 underline">Selecionar Componentes</Link> para entender o processo completo.
+</MdxCallout>
+
