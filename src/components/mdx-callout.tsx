@@ -18,7 +18,7 @@ export function MdxCallout({ type = "info", title, children }: CalloutProps) {
 	};
 
 	return (
-		<Alert variant="default" className="border-l-4 ">
+		<Alert variant="default" className="border-l-4 mt-4">
 			{icons[type]}
 			{title && <AlertTitle>{title}</AlertTitle>}
 			<AlertDescription>{children}</AlertDescription>

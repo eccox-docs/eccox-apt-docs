@@ -1,0 +1,58 @@
+---
+title: "Serviço Tables"
+description: "Adicione tabelas DB2 e relacione os programas que acessam essas tabelas."
+tags: ["db2", "tables", "scsm", "programas"]
+---
+
+O serviço de **Tables** permite adicionar tabelas DB2 ao container e obter a lista de programas que acessam a tabela informada. Caso existam acessos, esses programas poderão ser adicionados em conjunto com a tabela. Se não houver nenhum programa relacionado, a tabela pode ser adicionada separadamente.
+
+A análise se baseia em acessos montados no DB2.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/tables_busca.png"
+    alt="Busca via serviço TABLES."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 24: Busca via serviço TABLES.</p>
+</div>
+
+### Campos do Formulário
+
+- **Creator**: Creator da tabela DB2 a ser pesquisada
+- **Table**: Nome da tabela DB2
+
+Para adicionar:
+
+1. Preencha os campos solicitados.
+2. Clique em **NEW** para incluir a requisição.
+3. Pressione **EXECUTE** para iniciar o processamento.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/tables_execute.png"
+    alt="Processamento via serviço TABLES."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 25: Incluindo e processando via serviço TABLES.</p>
+</div>
+
+É possível incluir **múltiplas tabelas** do mesmo creator de uma vez, separando os nomes com ponto e vírgula:
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/tables_lote.png"
+    alt="Inclusão em lote de tabelas."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 26: Inclusão em lote de tabelas.</p>
+</div>
+
+Para **remover uma tabela adicionada**, clique no ícone <Trash2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> da linha correspondente **antes da execução**.
+

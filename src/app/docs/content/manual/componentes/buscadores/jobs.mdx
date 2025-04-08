@@ -1,0 +1,43 @@
+---
+title: "Serviço JOBS"
+description: "Adicione programas e bases ao container com base em um JOB."
+tags: ["jobs", "scsm", "buscador", "mainframe"]
+---
+
+O serviço **JOBS** permite adicionar ao container os programas e bases de dados identificados a partir de um **JOB**.
+
+A busca é feita com base no nome do JOB e na biblioteca de origem informada. A análise retorna os programas e bases envolvidos na execução do JOB.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/jobs_busca.png"
+    alt="Busca via serviço JOBS."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 27: Busca via serviço JOBS.</p>
+</div>
+
+### Campos do Formulário
+
+- **Origin Type**: Origem do JOB. Atualmente, a opção disponível é `Library`.
+- **JOB Name**: Nome do JOB.
+- **DSNAME**: Nome da biblioteca de origem do JOB.
+
+Para executar:
+
+1. Preencha os dados do formulário.
+2. Clique no botão **EXECUTE** para iniciar o processamento.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/jobs_execute.png"
+    alt="Processamento via serviço JOBS."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 28: Incluindo e processando via serviço JOBS.</p>
+</div>
+

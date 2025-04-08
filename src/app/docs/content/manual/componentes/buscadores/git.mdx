@@ -1,0 +1,28 @@
+---
+title: "Serviço GIT"
+description: "Acesse repositórios GIT para buscar programas vinculados."
+tags: ["git", "repositório", "componentes"]
+---
+
+O serviço **GIT** permite acessar um repositório de dados e obter os programas com base nas informações fornecidas pelo usuário.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/git_popup.png"
+    alt="GIT Pop-up"
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 29: Pop-up de busca via GIT.</p>
+</div>
+
+### Campos do Formulário
+
+- **Organization Name**: Selecione a organização cadastrada. Ao selecionar, o campo "Project Name" será carregado com os projetos da organização.
+- **Project Name**: Projeto que será utilizado como origem. Ao selecionar, o campo "Repository Name" será carregado com os repositórios do projeto.
+- **Repository Name**: Repositório que deseja acessar. A seleção carregará o campo "Branch Name" com os branchs disponíveis.
+- **Branch Name**: Branch que será utilizado para obter os programas associados.
+
+Após o preenchimento das informações, clique no botão **PROCESS** para executar o serviço.
+

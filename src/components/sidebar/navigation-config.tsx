@@ -120,6 +120,52 @@ const categories: NavigationCategory[] = [
 					{
 						title: "Serviços Buscadores",
 						href: "/docs/manual/componentes/buscadores",
+						children: [
+							{
+								title: "Preparar Buscadores",
+								href: "/docs/manual/componentes/buscadores/preparacao-conteineres",
+							},
+							{
+								title: "SCSM Discovery",
+								href: "/docs/manual/componentes/buscadores/scsm-discovery",
+							},
+							{
+								title: "Library",
+								href: "/docs/manual/componentes/buscadores/library",
+							},
+							{
+								title: "Transaction",
+								href: "/docs/manual/componentes/buscadores/transaction",
+							},
+							{
+								title: "Programs",
+								href: "/docs/manual/componentes/buscadores/programs",
+							},
+							{
+								title: "Tables",
+								href: "/docs/manual/componentes/buscadores/tables",
+							},
+							{
+								title: "Jobs",
+								href: "/docs/manual/componentes/buscadores/jobs",
+							},
+							{
+								title: "DLI/DB",
+								href: "/docs/manual/componentes/buscadores/dli-db",
+							},
+							{
+								title: "Typing",
+								href: "/docs/manual/componentes/buscadores/typing",
+							},
+							{
+								title: "GIT",
+								href: "/docs/manual/componentes/buscadores/git",
+							},
+							{
+								title: "Typing for BDN FILE",
+								href: "/docs/manual/componentes/buscadores/bdn-file",
+							},
+						],
 					},
 					{
 						title: "Selecionar Componentes",

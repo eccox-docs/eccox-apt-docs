@@ -1,0 +1,37 @@
+---
+title: "Serviço Typing para BND File"
+description: "Serviço de análise de arquivos BND via ECCOX APT® EDGE APPLICATIONS FOR DDF."
+tags: ["typing", "bnd", "ddf", "eccox"]
+---
+
+O serviço **Typing for BND File** permite a análise de arquivos `.bnd` utilizados por aplicativos em plataforma distribuída que executam comandos SQL estáticos no ambiente Mainframe via **DDF (Distributed Data Facility)**.
+
+Essa funcionalidade é exclusiva da feature **ECCOX APT® EDGE APPLICATIONS FOR DDF**, e só estará disponível caso o usuário possua acesso a essa feature específica.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/typing_bnd_file.png"
+    alt="Usando o serviço TPYPING for BND File"
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 34: Usando o serviço TPYPING for BND File.</p>
+</div>
+
+## Como utilizar
+
+1. Clique no botão **TYPING FOR BND FILE** na interface do sistema.
+2. Na pop-up exibida (Figura 34), clique no campo **SELECT FILE**.
+3. Selecione o arquivo com extensão `.bnd` localizado em seu ambiente local.
+4. Após a seleção, clique no botão **UPLOAD BND FILE** que será habilitado.
+
+O serviço utilizará o arquivo para identificar o programa e os relacionamentos associados a ele.
+
+> **Nota:** Esse recurso permite o uso de **bases DB2 clonadas e isoladas**, em substituição às bases originais.
+
+
+---
+
+Pronto! Agora você pode usar o serviço TYPING FOR BND FILE para facilitar o mapeamento de dependências a partir de seus arquivos BND.
+

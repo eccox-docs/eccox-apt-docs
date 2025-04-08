@@ -1,0 +1,125 @@
+---
+title: "SCSM Discovery"
+description: "Utilize os serviços Changeman® e Endevor® para buscar programas e componentes."
+tags: ["componentes", "scsm", "changeman", "endevor"]
+---
+
+import { MdxImage } from '@/components/mdx-image';
+import { MdxCallout } from '@/components/mdx-callout';
+
+
+De acordo com as configurações feitas na instalação, o buscador exibido na tela poderá ser para uso de programas compilados via **Changeman®** ou **Endevor®**.
+
+---
+
+### Changeman®
+
+O serviço de **Changeman®** possibilita adicionar ao container de teste os programas pertencentes a determinado pacote de mudança. 
+
+Opcionalmente, pode ser solicitada uma **XREF** para os programas do pacote informado, o que possibilitará adicionar programas ou bases relacionadas encontradas na análise.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/changeman_busca.png"
+    alt="Busca via serviço Changeman."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 12: Busca via Serviço Changeman®.</p>
+</div>
+
+### Campos do Formulário
+
+- **Application**: Aplicação do pacote
+- **Code**: Código do pacote
+- **Associate PKG**: Incluir pacotes associados automaticamente
+- **Discovery**: Solicita XREF dos programas do pacote ou pacotes associados
+
+Para adicionar:
+
+1. Preencha os dados do formulário.
+2. Clique no botão **NEW** para incluir o pacote na lista de processamento.
+3. Pressione **EXECUTE** para iniciar o serviço.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/changeman_execute.png"
+    alt="Processamento via serviço Changeman."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 13: Incluindo e processando via serviço Changeman®.</p>
+</div>
+
+Para remover dados adicionados, clique no ícone <Trash2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> da linha correspondente antes da execução.
+
+---
+
+### Endevor® Package
+
+O serviço de **Endevor® Package** também permite adicionar ao container os programas de um pacote de mudança.
+
+É possível solicitar uma **XREF**, semelhante ao Changeman®.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/endevor_package.png"
+    alt="Busca via serviço Endevor Package."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 14: Serviço buscador Endevor® Package.</p>
+</div>
+
+### Campos do Formulário
+
+- **Environment**: Ambiente Master definido nas configurações (não editável)
+- **Stage**: Estágio de pesquisa com fallback configurado
+- **Package**: Nome do pacote de origem dos programas
+- **Discovery**: Solicita XREF dos programas do pacote
+
+Para adicionar:
+
+1. Preencha as informações.
+2. Clique em **NEW**.
+3. Execute com o botão **EXECUTE**.
+
+Para remover dados adicionados, use o botão da linha antes da execução.
+
+---
+
+### Endevor® Element
+
+Este serviço permite adicionar programas ao container com base em **sistema e subsistema** do elemento.
+
+Diferente do serviço de pacote, aqui os elementos são adicionados individualmente.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/endevor_element.png"
+    alt="Busca via serviço Endevor Element."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 15: Serviço buscador Endevor® Element.</p>
+</div>
+
+### Campos do Formulário
+- **Environment**: Ambiente Master (não editável)
+- **Stage**: Estágio inicial com fallback conforme configuração
+- **Element**: Nome do elemento a ser adicionado
+- **System**: Sistema ao qual o elemento pertence
+- **Sub-System**: Subsistema do elemento
+- **Discovery**: XREF dos programas do elemento
+
+Siga o mesmo procedimento:
+
+1. Preencher os dados
+2. Clicar em **NEW**
+3. Iniciar com **EXECUTE**
+4. Remover com o botão da linha se necessário, antes da execução
+

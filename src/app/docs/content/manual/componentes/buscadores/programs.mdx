@@ -1,0 +1,57 @@
+---
+title: "Serviço Programs"
+description: "Identifique bases DB2 acessadas por um programa e inclua no container."
+tags: ["db2", "programa", "xref", "programs"]
+---
+
+O serviço **Programs** permite identificar bases **DB2** acessadas por um programa e adicioná-las ao container de teste.
+
+A análise considera os acessos mapeados no DB2 para o programa informado.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/programs_busca.png"
+    alt="Busca via serviço Programs."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 21: Busca via serviço Programs.</p>
+</div>
+
+### Campo do Formulário
+
+- **Program**: Nome do programa a ser analisado
+
+Para adicionar uma nova busca:
+
+1. Preencha o campo com o nome do programa.
+2. Clique em **NEW** para adicionar à lista de processamento.
+3. Pressione **EXECUTE** para iniciar o serviço.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/programs_execute.png"
+    alt="Processamento via serviço Programs."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 22: Incluindo e processando via serviço Programs.</p>
+</div>
+
+É possível adicionar **vários programas ao mesmo tempo** separando os nomes por ponto e vírgula (`;`), conforme mostra a figura abaixo:
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/programs_lote.png"
+    alt="Inclusão em lote de programas."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 23: Inclusão em lote de programas.</p>
+</div>
+
+Para remover um programa adicionado, antes do processamento, clique no ícone <Trash2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> da linha correspondente.
+

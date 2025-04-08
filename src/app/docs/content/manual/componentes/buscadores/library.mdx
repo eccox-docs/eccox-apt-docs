@@ -1,0 +1,51 @@
+---
+title: "Serviço Library"
+description: "Busque programas por prefixo em bibliotecas de fontes."
+tags: ["library", "scsm", "busca", "xref"]
+---
+
+O serviço **Library** permite buscar programas a partir de um **DSNAME** de uma biblioteca de fontes e um **prefixo de pesquisa**.
+
+A análise retorna todos os programas que correspondem ao prefixo informado. Por exemplo:
+
+- Prefixo `SHP*` → busca por todos os programas que começam com `SHP`
+- Prefixo `SHPPROGM` → busca exata por `SHPPROGM`
+
+Opcionalmente, pode-se solicitar uma **XREF**, que permite incluir no container programas ou bases relacionadas aos encontrados inicialmente.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/library_busca.png"
+    alt="Busca via serviço Library"
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 16: Busca via serviço Library.</p>
+</div>
+
+### Campos do Formulário
+
+- **DSNAME**: Nome da biblioteca de fontes
+- **Prefix**: Prefixo de pesquisa dos programas
+- **DISCOVERY**: Solicita XREF para os programas encontrados
+
+### Como Utilizar
+
+1. Preencha os campos solicitados.
+2. Clique em **NEW** para incluir a requisição na lista de processamento.
+3. Pressione **EXECUTE** para iniciar a busca.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/library_execute.png"
+    alt="Processamento via serviço Library"
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 17: Incluindo e processando via serviço Library.</p>
+</div>
+
+Para remover uma busca adicionada antes do processamento, clique no ícone <Trash2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> da linha correspondente.
+

@@ -1,0 +1,44 @@
+---
+title: "Serviço DLI/DB"
+description: "Adicione DBDs do IMS ao container e obtenha programas relacionados."
+tags: ["ims", "dbd", "container", "scsm"]
+---
+
+O serviço **DLI/DB** permite adicionar **DBDs (DataBase Description)** do **IMS** ao container e identificar os programas que acessam esse DBD. Caso identificados, os programas podem ser adicionados automaticamente junto ao DBD no container.
+
+Esse serviço utiliza acessos montados no **catálogo do IMS** para identificar as dependências entre programas e bases de dados.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/dli_db_busca.png"
+    alt="Busca via serviço DLI/DB."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 30: Busca via serviço DLI/DB.</p>
+</div>
+
+### Campos do Formulário
+
+- **DBD Name**: Nome do DBD IMS a ser pesquisado.
+
+### Como utilizar
+
+1. Preencha o nome do DBD desejado.
+2. Clique em **NEW** para incluir a requisição na lista de processamento.
+3. Pressione **EXECUTE** para iniciar a execução do serviço.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/dli_db_execute.png"
+    alt="Processamento via serviço DLI/DB."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 31: Incluindo e processando via serviço DLI/DB.</p>
+</div>
+
+Para **remover uma entrada adicionada antes do processamento**, clique no ícone <Trash2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> correspondente à linha desejada.
+

@@ -27,7 +27,7 @@ export function GrandchildrenItems({
 							className={cn(
 								"w-full justify-start pl-2 cursor-pointer",
 								isActive(grandchild.href)
-									? "bg-primary/10 text-primary hover:bg-primary/15"
+									? "bg-primary/10 text-primary hover:bg-primary/15 text-xs"
 									: "hover:bg-primary/5 hover:text-primary text-xs font-normal",
 							)}
 						>

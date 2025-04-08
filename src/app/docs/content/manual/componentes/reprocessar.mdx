@@ -1,11 +1,43 @@
 ---
-title: "Em revisão final"
-description: "Este conteúdo está sendo preparado e estará disponível em breve."
-tags: ["em manutenção", "em construção", "revisão"]
+title: "Reprocessar Serviços"
+description: "Como reexecutar serviços buscadores para corrigir falhas ou obter novos resultados."
+tags: ["container", "show requests", "reprocessar", "execução"]
 ---
 
-### <span className="inline-flex items-center gap-2"><Construction size={20} /> Em Construção</span>
+Os serviços já executados podem ser reprocessados para:
+- Refazer uma pesquisa e obter novas versões de componentes;
+- Corrigir falhas na execução anterior do serviço.
 
-Este conteúdo está atualmente em fase de **construção** ou **revisão**.
+Para isso, acesse a aba **Show Requests** na tela de edição de um container e utilize o botão <Repeat2 className="inline w-4 h-4" /> presente na linha correspondente à requisição que deseja reexecutar.
 
-Volte mais tarde para acessar as informações completas ou entre em contato com o suporte para mais detalhes.
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/reprocessar-servicos/reprocessar_servico.png"
+    alt="Reprocessamento de serviços buscadores."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 42: Reprocessamento de serviços.</p>
+</div>
+
+Ao clicar no botão, será exibida uma pop-up com os dados utilizados na execução anterior já preenchidos. 
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/reprocessar-servicos/reprocessar_servico_popup.png"
+    alt="Reprocessamento de serviços buscadores - pop-up."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+</div>
+
+É possível:
+- Executar novamente sem alterações, clicando em **EXECUTE**;
+- Adicionar, excluir ou modificar parâmetros antes da nova execução.
+
+<MdxCallout type="tip" title="Dica">
+É possível exportar logs gerados pelas execuções para fins de documentação e análise, consulte a página <Link href="/docs/manual/componentes/logs" className="text-blue-600 underline">Exportar Logs</Link> para mais informações.
+</MdxCallout>
+
+

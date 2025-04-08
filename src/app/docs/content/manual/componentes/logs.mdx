@@ -1,11 +1,54 @@
 ---
-title: "Em revisão final"
-description: "Este conteúdo está sendo preparado e estará disponível em breve."
-tags: ["em manutenção", "em construção", "revisão"]
+title: "Exportando logs"
+description: "Como visualizar e exportar os logs de execução dos serviços buscadores na aba Show Requests."
+tags: ["logs", "exportação", "serviços buscadores"]
 ---
 
-### <span className="inline-flex items-center gap-2"><Construction size={20} /> Em Construção</span>
+Os logs gerados pelos serviços buscadores podem ser exportados para análise e documentação. Essa funcionalidade está disponível na aba **Show Requests** da tela de edição do container de teste.
 
-Este conteúdo está atualmente em fase de **construção** ou **revisão**.
+### Opção 1: Exportar lista de requisições
 
-Volte mais tarde para acessar as informações completas ou entre em contato com o suporte para mais detalhes.
+A primeira opção de exportação está localizada no topo da aba **Show Requests**. É possível baixar a lista dos serviços de Discovery executados através do botão **Download**.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/reprocessar-servicos/download_lista_show_requests.png"
+    alt="Botão Download da lista Show Requests"
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 43: Download da lista Show Requests.</p>
+</div>
+
+### Opção 2: Exportar logs de execução
+
+A segunda opção corresponde à exportação dos logs de execução dos serviços. Essa funcionalidade está disponível por meio dos ícones <User className="inline w-4 h-4 mr-1" /> **Logs de usuário** e <Settings className="inline w-4 h-4 mr-1" /> **Logs de sistema** exibidos em cada linha da tabela.
+
+
+Ao clicar nos ícones de log, uma pop-up será exibida com o conteúdo das mensagens de execução.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/reprocessar-servicos/popup_logs_execucao.png"
+    alt="Pop-up de logs de execução"
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 44: Pop-up de logs de execução de um serviço buscador.</p>
+</div>
+
+Na pop-up, é possível:
+
+- Visualizar o status da execução **sucesso**, **erro** ou **alerta**;
+- Investigar causas de falhas;
+- Aplicar correções antes de reprocessar;
+- Utilizar o campo **Search** para filtrar informações específicas com mais facilidade;
+- Exportar os dados exibidos para um arquivo `.txt` clicando no botão **DOWNLOAD**.
+
+Esses registros são úteis para entender o status da execução e aplicar possíveis correções antes de reprocessar o serviço.
+
+<MdxCallout type="tip" title="Dica">
+Utilize os filtros de pesquisa para localizar mensagens específicas de erro ou de alerta rapidamente.
+</MdxCallout>

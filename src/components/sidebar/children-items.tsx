@@ -41,16 +41,15 @@ export function ChildrenItems({
 							// Se tiver filhos, use "#" como href para prevenir navegação
 							child.children?.length ? "#" : child.href,
 							handleClick,
-							<Button
-								variant={isActive(child.href) ? "secondary" : "ghost"}
+							<div
 								className={cn(
-									"w-full justify-start pl-6 cursor-pointer",
+									"w-full justify-start pl-6 cursor-pointer py-2 px-3 rounded-md",
 									isActive(child.href)
-										? "bg-primary/10 text-primary hover:bg-primary/15"
-										: "hover:bg-primary/5 hover:text-primary text-sm font-normal ",
+										? "bg-primary/10 text-primary hover:bg-primary/15 text-sm"
+										: "hover:bg-primary/5 hover:text-primary text-sm font-normal",
 								)}
 							>
-								<div className="flex items-center w-full ">
+								<div className="flex items-center w-full">
 									{child.title}
 									{(child.children?.length ?? 0) > 0 && (
 										<ChevronDown
@@ -62,7 +61,7 @@ export function ChildrenItems({
 										/>
 									)}
 								</div>
-							</Button>,
+							</div>,
 						)}
 
 						{/* Renderiza netos se existirem e o pai estiver expandido */}

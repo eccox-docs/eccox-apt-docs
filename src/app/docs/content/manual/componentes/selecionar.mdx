@@ -1,11 +1,189 @@
 ---
-title: "Em revisão final"
-description: "Este conteúdo está sendo preparado e estará disponível em breve."
-tags: ["em manutenção", "em construção", "revisão"]
+title: "Selecionar Componentes"
+description: "Como selecionar e validar componentes encontrados pelos serviços buscadores."
+tags: ["container", "seleção", "componentes", "divergência"]
 ---
 
-### <span className="inline-flex items-center gap-2"><Construction size={20} /> Em Construção</span>
+As requisições realizadas pelos serviços buscadores são registradas na aba **Show Requests** da tela de edição de um container de teste.
 
-Este conteúdo está atualmente em fase de **construção** ou **revisão**.
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/selecionar-componentes/show_requests.png"
+    alt="Requisições em Show Requests"
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 35: Requisições em Show Requests.</p>
+</div>
 
-Volte mais tarde para acessar as informações completas ou entre em contato com o suporte para mais detalhes.
+A aba **Show Requests** apresenta:
+- Mensagens de processamento das requisições;
+- Componentes retornados de cada serviço buscador;
+- Filtros por coluna para facilitar a pesquisa;
+- Botões de operação por linha.
+
+### Operações disponíveis
+
+<div className="overflow-x-auto border rounded-lg my-4">
+  <table className="w-full text-left border-collapse">
+    <thead className="bg-muted text-muted-foreground">
+      <tr>
+        <th className="px-4 py-2">Ícone</th>
+        <th className="px-4 py-2">Descrição</th>
+        <th className="px-4 py-2">Uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td className="px-4 py-2"><Copy className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Component List Retrieved</td><td className="px-4 py-2">Acesso à lista de componentes encontrados.</td></tr>
+      <tr><td className="px-4 py-2"><User className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">List and User Messages</td><td className="px-4 py-2">Visualiza mensagens do usuário.</td></tr>
+      <tr><td className="px-4 py-2"><Settings className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">List Technical APT and z/OS messages</td><td className="px-4 py-2">Mostra logs técnicos.</td></tr>
+      <tr><td className="px-4 py-2"><Repeat2 className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Reprocess</td><td className="px-4 py-2">Reexecuta a requisição.</td></tr>
+      <tr><td className="px-4 py-2"><FileWarning className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Browse Divergence</td><td className="px-4 py-2">Lista componentes divergentes que já existem no container com outra origem.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/selecionar-componentes/componentes_retornados.png"
+    alt="Componentes retornados por um serviço buscador."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 36: Componentes retornados por um serviço buscador.</p>
+</div>
+
+### Estrutura da tabela de componentes
+
+<div className="overflow-x-auto border rounded-lg my-4">
+  <table className="w-full text-left border-collapse">
+    <thead className="bg-muted text-muted-foreground">
+      <tr><th className="px-4 py-2">Campo</th><th className="px-4 py-2">Descrição</th></tr>
+    </thead>
+    <tbody>
+      <tr><td className="px-4 py-2 font-semibold">Component Type</td><td className="px-4 py-2">Tipo do componente identificado</td></tr>
+      <tr><td className="px-4 py-2 font-semibold">Component Name</td><td className="px-4 py-2">Nome do componente identificado</td></tr>
+      <tr><td className="px-4 py-2 font-semibold">Related Comp. Type</td><td className="px-4 py-2">Tipo do componente relacionado</td></tr>
+      <tr><td className="px-4 py-2 font-semibold">Related Comp. Name</td><td className="px-4 py-2">Nome do componente relacionado</td></tr>
+      <tr><td className="px-4 py-2 font-semibold">CRUD</td><td className="px-4 py-2">Permissões de acesso: Create (C), Read (R), Update (U), Delete (D)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+### Opções de execução (Run Programs On)
+
+- **Mainframe** (padrão): programas executam apenas no mainframe.
+- **Distributed**: executam apenas em plataforma distribuída (requer a feature **ECCOX APT® EDGE APPLICATIONS FOR DDF**).
+- **Mainframe and Distributed**: executam em ambos os ambientes.
+
+### Selecionando componentes
+
+A seleção dos componentes é feita via checkbox:
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/selecionar-componentes/selecionar_componentes.png"
+    alt="Seleção automática de componentes."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 37: Seleção automática de componentes.</p>
+</div>
+
+Após selecionar os componentes desejados, clique em **CONCLUDE** para iniciar a **validação de versões**. Se existirem componentes iguais já presentes no container com origens diferentes, será exibido o alerta de divergência.
+
+### Lidando com divergências
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/selecionar-componentes/browse_divergences_origens.png"
+    alt="Browse Divergences - Origens."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 38: Divergência de origens identificada</p>
+</div>
+
+Componentes em divergência serão destacados na coluna **Status Add** com mensagens como:
+
+- No selected components were added because they are already in the container
+- All selected components are with origin choice PENDING
+- Some selected components were added, and others are already in the container
+- Some selected components were added, and others are with origin choice PENDING
+
+Para resolver:
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/selecionar-componentes/browse_divergences.png"
+    alt="Browse Divergences."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 39: Browse Divergência.</p>
+</div>
+
+Escolha entre as opções:
+- **Container**: mantém a versão atual.
+- **Discovery**: substitui pela versão descoberta (com action `replace` se necessário).
+
+Você pode usar os botões **ALL CONTAINER** ou **ALL DISCOVERY** para aplicar em lote.
+
+### Finalizando o processo
+
+Após resolver as divergências, finalize com **CONCLUDE**. Os componentes serão exibidos na aba **Container Preparation** da tela principal do container:
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/selecionar-componentes/componentes_adicionados.png"
+    alt="Componentes recentemente adicionados."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 40: Componentes recentemente adicionados.</p>
+</div>
+
+Use o botão **Execute Component Pending Action** para:
+- Criar a primeira versão de clones;
+- Atualizar clones existentes.
+
+<MdxCallout type="warning"  title="Atenção">
+ Os botões disponíveis podem variar conforme as features contratadas
+</MdxCallout>
+
+### Observação sobre o Discovery de GIT
+
+O layout da lista de componentes do Discovery GIT possui particularidades. Os campos adicionais exibidos são:
+
+<div className="overflow-x-auto border rounded-lg my-4">
+  <table className="w-full text-left border-collapse">
+    <thead className="bg-muted text-muted-foreground">
+      <tr><th className="px-4 py-2">Campo</th><th className="px-4 py-2">Descrição</th></tr>
+    </thead>
+    <tbody>
+      <tr><td className="px-4 py-2 font-semibold">Component Type</td><td className="px-4 py-2">Tipo do componente relacionado</td></tr>
+      <tr><td className="px-4 py-2 font-semibold">Component Name</td><td className="px-4 py-2">Nome do programa com sua extensão válida</td></tr>
+      <tr><td className="px-4 py-2 font-semibold">Root Path / Tree</td><td className="px-4 py-2">Caminho onde o componente foi localizado no GIT</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/selecionar-componentes/componentes_git.png"
+    alt="Lista de componentes GIT."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 41: Lista de componentes GIT.</p>
+</div>
+
+Para saber mais sobre como gerar as informações do container, consulte o próximo capítulo: **Gerenciando um container de teste**.
+

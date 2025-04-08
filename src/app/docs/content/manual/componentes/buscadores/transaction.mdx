@@ -1,0 +1,57 @@
+---
+title: "Serviço Transaction"
+description: "Busque e adicione programas ao container a partir de transações CICS ou IMS."
+tags: ["transaction", "cics", "ims", "xref"]
+---
+
+O serviço de **Transaction** busca, a partir de uma transação fornecida, o nome do programa relacionado para inclusão no container.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/transaction_busca.png"
+    alt="Busca via serviço Transaction."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 18: Busca via serviço transaction</p>
+</div>
+
+### Campos do Formulário
+
+- **Type**: Tipo da transação informada. Pode ser **CICS** ou **IMS**
+- **Code**: Código da transação
+- **Discovery**: Retorna o programa correspondente à transação e toda a Cross-reference associada
+
+### Como utilizar
+
+1. Preencha os dados obrigatórios
+2. Clique no botão **NEW** para adicionar a requisição à lista de processamento
+3. Pressione **EXECUTE** para iniciar o serviço
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/transaction_execute.png"
+    alt="Execução do serviço Transaction."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 19: Incluindo e processando via serviço transaction.</p>
+</div>
+
+Também é possível adicionar **várias transações do mesmo tipo** separando os nomes por ponto e vírgula.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/components/servicos-buscadores/transaction_lote.png"
+    alt="Inclusão em lote de transações."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 20: Inclusão em lote de transações.</p>
+</div>
+
+Para remover uma transação cadastrada antes do processamento, utilize o ícone <Trash2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> na linha correspondente.
+
