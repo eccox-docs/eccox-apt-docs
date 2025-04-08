@@ -1,10 +1,10 @@
 "use client";
 
-import { AlertTriangle, Info, Lightbulb } from "lucide-react";
+import { AlertTriangle, Info, Lightbulb, Link } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 
 interface CalloutProps {
-	type?: "info" | "warning" | "tip";
+	type?: "info" | "warning" | "tip" | "link";
 	title?: string;
 	children: React.ReactNode;
 }
@@ -14,6 +14,7 @@ export function MdxCallout({ type = "info", title, children }: CalloutProps) {
 		info: <Info className="h-5 w-5 stroke-blue-500" />,
 		warning: <AlertTriangle className="h-5 w-5 stroke-amber-500" />,
 		tip: <Lightbulb className="h-5 w-5 stroke-yellow-500" />,
+		link: <Link className="h-5 w-5 stroke-blue-500" />,
 	};
 
 	return (

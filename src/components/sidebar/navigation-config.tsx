@@ -95,8 +95,12 @@ const categories: NavigationCategory[] = [
 						href: "/docs/manual/container-lista/acoes",
 					},
 					{
-						title: "Duplicar ou Remover",
-						href: "/docs/manual/container-lista/duplicar-remover",
+						title: "Duplicar",
+						href: "/docs/manual/container-lista/duplicar",
+					},
+					{
+						title: "Remover",
+						href: "/docs/manual/container-lista/remover",
 					},
 					{
 						title: "Ativar com Erro",

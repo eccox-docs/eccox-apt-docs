@@ -1,0 +1,41 @@
+---
+title: "Remover Container pela Tela de Browse"
+description: "Aprenda a remover containers inativos ou novos diretamente pela tela de Browse do APTWEB."
+tags: ["manual", "test-container", "browse"]
+---
+
+import { MdxImage } from '@/components/mdx-image';
+
+
+Você pode remover containers inativos ou novos diretamente pela tela de **Browse**, clicando no botão <Trash2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> na seção **Container Actions**.
+
+Essa opção só estará disponível se o container **não possuir componentes clones** e estiver com status **New Container** ou **Inactive Container**.
+
+Containers removidos são enviados para a **Recycle Bin**, de onde podem ser:
+- <Undo2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> **Restaurados** à lista de containers ativos;
+- <Trash2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> **Deletados permanentemente** do sistema.
+
+Para acessar a Recycle Bin, utilize o menu **Test Container > Recycle BIN**.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/browse/recycle_bin.png"
+    alt="Tela da Recycle Bin com opções para restaurar ou deletar containers."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 10: Recycle Bin.</p>
+</div>
+
+Na Recycle Bin, cada container possui as seguintes ações:
+
+- <Eye className="inline w-4 h-4 mx-1 text-muted-foreground" /> **Visualizar**: exibe os detalhes do container em modo somente leitura.
+- <Trash2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> **Deletar**: remove o container de forma permanente (não pode ser recuperado).
+- <Undo2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> **Restaurar**: retorna o container para a lista de containers ativos.
+
+Além disso, há dois botões na parte superior da tela que permitem:
+- <RotateCw className="inline w-4 h-4 mx-1 text-muted-foreground" /> **Restaurar todos** os containers listados;
+- <Trash2 className="inline w-4 h-4 mx-1 text-muted-foreground" /> **Deletar todos** permanentemente.
+
+Essas opções facilitam a gestão em massa dos containers removidos.

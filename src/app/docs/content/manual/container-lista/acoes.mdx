@@ -1,11 +1,69 @@
 ---
-title: "Em revisão final"
-description: "Este conteúdo está sendo preparado e estará disponível em breve."
-tags: ["em manutenção", "em construção", "revisão"]
+title: "Aplicando Ações em Containers"
+description: "Saiba como executar ações diretamente pela tela de Browse em containers no APTWEB."
+tags: ["manual", "test-container", "acoes", "browse"]
 ---
 
-### <span className="inline-flex items-center gap-2"><Construction size={20} /> Em Construção</span>
+import { MdxCallout } from '@/components/mdx-callout';
 
-Este conteúdo está atualmente em fase de **construção** ou **revisão**.
 
-Volte mais tarde para acessar as informações completas ou entre em contato com o suporte para mais detalhes.
+A tela de **Browse** permite aplicar comandos de processamento diretamente em um container, sem necessidade de acessá-lo individualmente. Essas ações estão disponíveis na seção **Container Actions**, localizada na mesma linha do container desejado.
+
+### Ações Disponíveis
+
+<div className="overflow-x-auto border rounded-lg my-4">
+  <table className="w-full text-left border-collapse">
+    <thead className="bg-muted text-muted-foreground">
+      <tr>
+        <th className="px-4 py-2">Ícone</th>
+        <th className="px-4 py-2">Descrição</th>
+        <th className="px-4 py-2">Uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className="px-4 py-2"><Play className="inline w-4 h-4" /></td>
+        <td className="px-4 py-2 font-semibold">Executar Ações Pendentes</td>
+        <td className="px-4 py-2">Dispara o processamento das ações definidas pelos componentes no container.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2"><RotateCcw className="inline w-4 h-4" /></td>
+        <td className="px-4 py-2 font-semibold">Replace All Components</td>
+        <td className="px-4 py-2">Cria novo clone para todos os componentes com base nas versões originais definidas.</td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2"><CircleX className="inline w-4 h-4" /></td>
+        <td className="px-4 py-2 font-semibold">Destroy All Components</td>
+        <td className="px-4 py-2">Remove os clones criados no Mainframe, mantendo o container inativado.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<MdxCallout type="link" title="Consulte também">
+  Para mais detalhes sobre o uso de ações em containers, consulte:
+  <ul className="list-disc ml-5 mt-2">
+    <li>
+      <Link href="/docs/manual/container-gerenciar/acoes" className="text-blue-600 underline">
+        Ações em Componentes
+      </Link>
+    </li>
+    <li>
+      <Link href="/docs/manual/container-gerenciar/acoes" className="text-blue-600 underline">
+        Ações em Lote
+      </Link>
+    </li>
+    <li>
+      <Link href="/docs/manual/container-gerenciar/carga-inicial" className="text-blue-600 underline">
+        Carga Inicial
+      </Link>
+    </li>
+    <li>
+      <Link href="/docs/manual/container-gerenciar/processamento" className="text-blue-600 underline">
+        Executar Processamento
+      </Link>
+    </li>
+  </ul>
+</MdxCallout>
+
+

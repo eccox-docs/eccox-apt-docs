@@ -1,0 +1,40 @@
+---
+title: Duplicar e Remover Containers
+description: "Aprenda a duplicar e remover containers de teste na tela de Browse do APTWEB."
+tags: ["manual", "test-container", "browse"]
+---
+
+import { MdxImage } from '@/components/mdx-image';
+import { FilePlus } from 'lucide-react';
+
+Você pode duplicar um container de teste com um novo nome, mantendo-o no mesmo plano de teste ou alocando-o em outro, conforme necessário.
+
+Para iniciar o processo de duplicação:
+1. Acesse a tela **Browse**.
+2. Pressione o botão <SquareMenu className="inline w-4 h-4 mx-1 text-muted-foreground" /> na linha do container desejado.
+3. Você será redirecionado para a tela de duplicação do container.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/browse/duplicate_container.png"
+    alt="Tela de duplicação de um container."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 9: Duplicate de um container.</p>
+</div>
+
+Na tela exibida, os campos **Environment** e **Application** já estarão preenchidos com as informações do container original. Preencha os seguintes campos para criar o novo container:
+
+- **Test Container Name**: nome do novo container.
+- **Test Plan**: plano de teste no qual o novo container será inserido.
+
+Escolha entre as seguintes opções de duplicação:
+
+- **Same Source as Original Container**: mantém a mesma origem de dados dos componentes do container original.
+- **Clones of Original Container**: gera clones das bases de dados com base no container original (somente componentes ativos serão considerados).
+
+Para finalizar, clique em **DUPLICATE CONTAINER**. Isso criará um novo container com os mesmos componentes do original, todos com a ação `NEW`, permitindo novo processamento e geração de clones.
+
+

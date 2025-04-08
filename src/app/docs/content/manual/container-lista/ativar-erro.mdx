@@ -1,11 +1,31 @@
 ---
-title: "Em revisão final"
-description: "Este conteúdo está sendo preparado e estará disponível em breve."
+title: "Ativar Container com Erro pela Tela de Browse"
+description:  "Aprenda a ativar containers com erro diretamente pela tela de Browse do APTWEB."
 tags: ["em manutenção", "em construção", "revisão"]
 ---
+import { MdxImage } from '@/components/mdx-image';
 
-### <span className="inline-flex items-center gap-2"><Construction size={20} /> Em Construção</span>
+Em alguns casos, a clonagem de componentes pode falhar, deixando o container com status de **Erro**. Isso pode ocorrer devido a fatores externos do ambiente ou instabilidades no produto.
 
-Este conteúdo está atualmente em fase de **construção** ou **revisão**.
+Antes de prosseguir com a ativação, é recomendado analisar as mensagens de erro e tentar corrigi-las. No entanto, caso deseje seguir com a ativação do container, utilize o botão <SkipForward className="inline w-4 h-4 mx-1 text-muted-foreground" /> disponível na coluna **Container Actions**.
 
-Volte mais tarde para acessar as informações completas ou entre em contato com o suporte para mais detalhes.
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/browse/activate_error_container.png"
+    alt="Ativação de container com erro via tela Browse."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 11: Ativando um container com erro.</p>
+</div>
+
+Esse botão só estará visível para containers com status de erro.
+
+Ao ativar o container:
+- Ele será habilitado, mesmo que haja componentes com erro.
+- Os componentes com erro **serão ignorados nos testes**.
+- Componentes originais (sem erro) serão utilizados durante a execução.
+
+Essa funcionalidade permite dar continuidade ao processo de testes sem depender da correção imediata de todos os componentes com falha.
+
