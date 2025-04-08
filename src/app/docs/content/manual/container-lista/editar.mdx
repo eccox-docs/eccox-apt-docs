@@ -1,11 +1,89 @@
 ---
-title: "Em revisão final"
-description: "Este conteúdo está sendo preparado e estará disponível em breve."
-tags: ["em manutenção", "em construção", "revisão"]
+title: "Visualizar e editar containers via Browse."
+description: "Descubra como usar Browse para gerenciar containers no APTWEB: visualize e edite"
+tags: ["manual", "test-container", "browse"]
 ---
 
-### <span className="inline-flex items-center gap-2"><Construction size={20} /> Em Construção</span>
+import { MdxImage } from '@/components/mdx-image';
+import { MdxCallout } from '@/components/mdx-callout';
 
-Este conteúdo está atualmente em fase de **construção** ou **revisão**.
+A opção **Browse**, localizada no menu lateral da seção **Test Container**, permite visualizar todos os containers cadastrados no sistema. Essa tela fornece funcionalidades como filtros, ações de duplicação e exclusão, além de executar processamentos específicos nos containers listados.
 
-Volte mais tarde para acessar as informações completas ou entre em contato com o suporte para mais detalhes.
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/browse/container_list.png"
+    alt="Lista de containers exibida pela funcionalidade Browse."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 8: Browse (lista de containers).</p>
+</div>
+
+### Status dos Containers
+
+Cada container exibe seu status atual conforme a tabela a seguir:
+
+<div className="overflow-x-auto border rounded-lg my-4">
+  <table className="w-full text-left border-collapse">
+    <thead className="bg-muted text-muted-foreground">
+      <tr>
+        <th className="px-4 py-2">Ícone</th>
+        <th className="px-4 py-2">Status</th>
+        <th className="px-4 py-2">Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td className="px-4 py-2">🔵</td><td className="px-4 py-2">New Container</td><td className="px-4 py-2">Container cadastrado sem nenhum processamento realizado.</td></tr>
+      <tr><td className="px-4 py-2">🟡</td><td className="px-4 py-2">Container Under Maintenance</td><td className="px-4 py-2">Container em manutenção.</td></tr>
+      <tr><td className="px-4 py-2">🟡</td><td className="px-4 py-2">Container Under Activation</td><td className="px-4 py-2">Em processo de ativação.</td></tr>
+      <tr><td className="px-4 py-2">🟡</td><td className="px-4 py-2">Pending Activation</td><td className="px-4 py-2">Aguardando ativação.</td></tr>
+      <tr><td className="px-4 py-2">🟡</td><td className="px-4 py-2">Copying Data</td><td className="px-4 py-2">Cópia de dados do ambiente remoto em andamento.</td></tr>
+      <tr><td className="px-4 py-2">🟡</td><td className="px-4 py-2">Generating Snapshot</td><td className="px-4 py-2">Gerando snapshot.</td></tr>
+      <tr><td className="px-4 py-2">🟡</td><td className="px-4 py-2">Restoring Snapshot</td><td className="px-4 py-2">Restaurando dados de um snapshot.</td></tr>
+      <tr><td className="px-4 py-2">🟢</td><td className="px-4 py-2">Active Container</td><td className="px-4 py-2">Processamento concluído com sucesso.</td></tr>
+      <tr><td className="px-4 py-2">⚫</td><td className="px-4 py-2">Inactive Container</td><td className="px-4 py-2">Todos os componentes foram destruídos.</td></tr>
+      <tr><td className="px-4 py-2">🔴</td><td className="px-4 py-2">Container in Error</td><td className="px-4 py-2">Ocorreu erro no processamento. Consulte os logs.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+### Ações disponíveis na tela de Browse
+
+<div className="overflow-x-auto border rounded-lg my-4">
+  <table className="w-full text-left border-collapse">
+    <thead className="bg-muted text-muted-foreground">
+      <tr>
+        <th className="px-4 py-2">Ícone</th>
+        <th className="px-4 py-2">Descrição</th>
+        <th className="px-4 py-2">Uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td className="px-4 py-2"><Eye className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Visualizar Container</td><td className="px-4 py-2">Acesso apenas leitura, sem possibilidade de execução.</td></tr>
+      <tr><td className="px-4 py-2"><Pencil className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Editar Container</td><td className="px-4 py-2">Permite edição e execução de ações.</td></tr>
+      <tr><td className="px-4 py-2"><Play className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Executar Ações Pendentes</td><td className="px-4 py-2">Executa ações atribuídas a componentes (Pending Action).</td></tr>
+      <tr><td className="px-4 py-2"><RotateCcw className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Replace All Components</td><td className="px-4 py-2">Substitui todos os componentes por uma nova cópia.</td></tr>
+      <tr><td className="px-4 py-2"><CircleX className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Destroy All Components</td><td className="px-4 py-2">Elimina todos os clones criados para o container.</td></tr>
+      <tr><td className="px-4 py-2"><SquareMenu className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Duplicar Container</td><td className="px-4 py-2">Copia container e seus componentes para um novo.</td></tr>
+      <tr><td className="px-4 py-2"><Trash2 className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Deletar Container</td><td className="px-4 py-2">Remove permanentemente o container do sistema.</td></tr>
+      <tr><td className="px-4 py-2"><SkipForward className="inline w-4 h-4" /></td><td className="px-4 py-2 font-semibold">Executar com Erros</td><td className="px-4 py-2">Ativa container ignorando componentes com erro.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<MdxCallout type="info" title="Observações Importantes">
+  Para as ações de execução, duplicação, replace e destroy, é necessário que o container possua componentes cadastrados. Caso contrário, as ações não serão habilitadas.
+</MdxCallout>
+
+### Visualização e Edição
+
+A partir dos ícones mencionados, é possível abrir o container em dois modos:
+
+- **Visualização:** Apenas consulta de informações, sem qualquer edição ou execução.
+- **Edição:** Permite alterações, execuções e gerenciamento de componentes.
+
+Para aprender como adicionar e listar componentes, acesse:
+
+<Link href="/docs/manual/componentes/adicionar" className="text-blue-600 underline">Adicionar componentes</Link> e <Link href="/docs/manual/componentes/selecionar" className="text-blue-600 underline">Selecionar componentes</Link>.
+
