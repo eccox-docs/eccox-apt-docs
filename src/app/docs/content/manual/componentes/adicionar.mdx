@@ -1,11 +1,38 @@
 ---
-title: "Em revisão final"
-description: "Este conteúdo está sendo preparado e estará disponível em breve."
-tags: ["em manutenção", "em construção", "revisão"]
+title: "Adicionar Componentes"
+description: "Aprenda a adicionar componentes a um container de teste."
+tags: ["componentes", "adicionar", "container"]
 ---
 
-### <span className="inline-flex items-center gap-2"><Construction size={20} /> Em Construção</span>
+A adição e uso de componentes em um container se divide em duas etapas principais:
 
-Este conteúdo está atualmente em fase de **construção** ou **revisão**.
+- **Busca e seleção dos componentes**, realizada por meio dos **serviços buscadores**.
+- **Processamento**, feito através dos **botões de ações**.
 
-Volte mais tarde para acessar as informações completas ou entre em contato com o suporte para mais detalhes.
+> Todo componente adicionado ou atualizado precisa passar por um processamento. A seleção feita pelos serviços buscadores representa uma definição lógica, enquanto o processamento consolida as ações parametrizadas e gera os clones dos componentes para testes.
+
+Para adicionar componentes:
+
+1. Acesse o menu **Test Container > Browse**.
+2. Localize o container desejado.
+3. Clique no botão <Pencil className="inline w-4 h-4 mx-1 text-muted-foreground" /> para editá-lo.
+
+<div className="my-6">
+  <MdxImage
+    src="/images/docs/test-container/browse/editar_container.png"
+    alt="Edição de container via tela Browse."
+    width={1200}
+    height={700}
+    className="rounded-lg border"
+  />
+  <p className="mt-2 text-sm text-muted-foreground">Figura 12: Edição de um container via tela Browse.</p>
+</div>
+
+
+Se estiver criando um novo container, você será redirecionado automaticamente para a tela interna do container recém-criado.
+
+Para mais detalhes sobre a criação de containers, consulte a seção:
+
+<MdxCallout type="link" title="Criação de Containers">
+  Acesse a página <Link href="/docs/manual/container-criacao/criacao" className="text-blue-600 underline">Criar Container</Link> para entender o processo completo de criação.
+</MdxCallout>
