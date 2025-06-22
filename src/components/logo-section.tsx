@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 import { getPath } from "@/utils/get-path";
+import { BookOpen } from "lucide-react";
+import { PiBookOpenUserBold } from "react-icons/pi";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -61,7 +63,7 @@ export function LogoSection({
 				</div>
 				<span className="text-2xl font-bold">APT</span>
 				{version && (
-					<span className="text-sm font-medium text-muted-foreground">
+					<span className="text-sm font-medium text-muted-foreground ml-1">
 						{version}
 					</span>
 				)}
@@ -70,15 +72,23 @@ export function LogoSection({
 			{/* Indicador de documentação - renderizado apenas se showDocIndicator for true */}
 			{showDocIndicator && (
 				<div className="flex items-center justify-center gap-2">
-					<div className="flex size-6 items-center justify-center rounded-[4px] bg-[#d5efff]">
+					{/* <div className="flex size-6 items-center justify-center rounded-[4px] border bg-primary/15">
 						<Image
 							src={getPath("/images/IconDocumentation.svg")}
 							alt="Ícone de Documentação"
 							width={iconSize}
 							height={iconSize}
 						/>
+						<BookOpen className="h-4 w-4 text-muted-foreground stroke-blue-500" />
+					</div> */}
+					<div className="flex gap-1 items-center justify-center  ">
+					
+						<PiBookOpenUserBold 
+						 color=""
+						 />
+
+				    <span className="text-sm font-semibold">Docs</span>
 					</div>
-					<span className="text-lg font-semibold">Docs</span>
 				</div>
 			)}
 		</div>
