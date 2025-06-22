@@ -2,11 +2,17 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { MdxCallout } from "../mdx-callout";
 import { MdxImage } from "../mdx-image";
+import { MdxVideoPlayer } from "../mdx-video-player";
+import { VideoGrid, ResponsiveVideoGrid, VideoGridContainer } from "../mdx-video-grid";
 
 export const baseComponents = {
 	Link,
 	MdxCallout,
 	MdxImage,
+	MdxVideoPlayer,
+	VideoGrid,
+	ResponsiveVideoGrid,
+	VideoGridContainer,
 	h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
 		<h1
 			className={cn(

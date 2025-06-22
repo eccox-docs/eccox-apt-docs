@@ -68,6 +68,9 @@ import {
 	Users2,
 	Video,
 	Wrench,
+	PlayCircle, 
+	X, 
+	Image as ImageIcon,
 } from "lucide-react";
 
 export const Icons = {
@@ -140,4 +143,7 @@ export const Icons = {
 	RefreshCcw,
 	Repeat2,
 	FileWarning,
+	ImageIcon,
+	X,
+	PlayCircle
 };
