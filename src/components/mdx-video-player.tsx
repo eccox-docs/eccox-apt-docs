@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { PlayCircle, X, ImageIcon } from "lucide-react";
+import { Play, X, ImageIcon } from "lucide-react";
 import { Dialog, DialogTrigger, DialogContent, DialogOverlay, DialogClose, DialogTitle } from "@radix-ui/react-dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import clsx from "clsx";
@@ -124,8 +124,8 @@ export function MdxVideoPlayer({ videoUrl, title, description }: MdxVideoPlayerP
 
               {/* Overlay com botão de play */}
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                <div className="bg-red-600 hover:bg-red-700 rounded-full p-4 transform group-hover:scale-110 transition-all duration-300 shadow-2xl">
-                  <PlayCircle className="w-8 h-8 text-white"  />
+                <div className="bg-red-600/30 hover:bg-red-700 rounded-full p-2 transform group-hover:scale-110 transition-all duration-300 shadow-2xl">
+                  <Play className="w-5 h-5 text-white" />
                 </div>
               </div>
 
@@ -137,7 +137,21 @@ export function MdxVideoPlayer({ videoUrl, title, description }: MdxVideoPlayerP
 
             {/* Informações do vídeo */}
             {(title || description) && (
-              <div className="mt-3 px-1">
+              <div className="mt-3 px-1 relative group">
+                <div className="pointer-events-none group-hover:pointer-events-auto absolute bottom-full left-0 z-50 mt-2 w-72 rounded-xl bg-white dark:bg-gray-900 shadow-lg p-4 border border-gray-200 dark:border-gray-700 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  {title && (
+                    <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                      {title}
+                    </h3>
+                  )}
+                  {description && (
+                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                      {description}
+                    </p>
+                  )}
+                </div>
+
+                {/* Ainda mostra o título "resumido" fora do hover */}
                 {title && (
                   <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-base line-clamp-2 mb-1 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors duration-200">
                     {title}
@@ -166,7 +180,7 @@ export function MdxVideoPlayer({ videoUrl, title, description }: MdxVideoPlayerP
           <VisuallyHidden>
             <DialogTitle>{title || "Reprodutor de Vídeo"}</DialogTitle>
           </VisuallyHidden>
-          
+
           <div className="relative w-full aspect-video">
             <iframe
               className="w-full h-full"
@@ -177,7 +191,7 @@ export function MdxVideoPlayer({ videoUrl, title, description }: MdxVideoPlayerP
               title={title || "Reprodutor de Vídeo"}
             />
           </div>
-          
+
           <DialogClose className="absolute right-4 top-4 z-10 rounded-full bg-black/50 hover:bg-black/70 p-2 transition-colors duration-200">
             <X className="h-5 w-5 text-white" />
             <span className="sr-only">Fechar</span>

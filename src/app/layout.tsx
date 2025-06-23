@@ -11,7 +11,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: "APT Docs",
 	description: "Documentação do sistema APT",
-	generator: "v0.dev",
 };
 
 export default function RootLayout({

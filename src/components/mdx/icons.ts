@@ -71,9 +71,21 @@ import {
 	PlayCircle, 
 	X, 
 	Image as ImageIcon,
+	LayoutDashboard,
+	Layers,
+	ShieldCheck,
+	BarChart2,
+	TvMinimalPlay,
+	ListVideo
 } from "lucide-react";
 
 export const Icons = {
+	ListVideo,
+	TvMinimalPlay,
+	BarChart2,
+	LayoutDashboard,
+	Layers,
+	ShieldCheck,
 	Bell,
 	BookOpen,
 	Info,

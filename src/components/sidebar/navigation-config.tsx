@@ -14,10 +14,12 @@ import {
 	Home,
 	Laptop,
 	ListTodo,
+	ListVideo,
 	PenTool,
 	Server,
 	Settings,
 	Shield,
+	TvMinimalPlay,
 	Video,
 } from "lucide-react";
 
@@ -289,80 +291,92 @@ const categories: NavigationCategory[] = [
 			},
 		],
 	},
-	// Categoria de Aprendizado
+	// Categoria de vídeos
 	{
-		id: "aprenda",
-		title: "Aprenda",
-		href: "/docs/aprenda",
-		icon: <GraduationCap className="h-4 w-4" />,
+		id: "guia-video",
+		title: "Guia em Vídeo",
+		href: "/docs/guia-video",
+		icon: <TvMinimalPlay className="h-4 w-4" />,
 		sections: [
+				{
+				title: "Biblioteca de Vídeos",
+				href: "/docs/guia-video/videos",
+				icon: <ListVideo className="h-4 w-4" />,
+				children: [
+					{ title: "Introdução", href: "/docs/guia-video/videos/introduction" },
+					{
+						title: "Navegação na Interface",
+						href: "/docs/guia-video/videos/navigation",
+					},
+					{
+						title: "Gerenciamento de Containers",
+						href: "/docs/guia-video/videos/containers",
+					},
+					{
+						title: "Configuração e Segurança",
+						href: "/docs/guia-video/videos/configuration-security",
+					},
+					{
+						title: "Administração e Traces",
+						href: "/docs/guia-video/videos/administration-traces",
+					},
+					{ title: "Casos de uso", href: "/docs/guia-video/videos/case-studies" },
+				],
+			},
 			{
 				title: "Fundamentos",
-				href: "/docs/aprenda/fundamentos",
+				href: "/docs/guia-video/fundamentos",
 				icon: <BookMarked className="h-4 w-4" />,
 				children: [
 					{
 						title: "Conceitos básicos",
-						href: "/docs/aprenda/fundamentos/conceitos-basicos",
+						href: "/docs/guia-video/fundamentos/conceitos-basicos",
 					},
 					{
 						title: "Arquitetura",
-						href: "/docs/aprenda/fundamentos/arquitetura",
+						href: "/docs/guia-video/fundamentos/arquitetura",
 					},
 					{
 						title: "Modelos de dados",
-						href: "/docs/aprenda/fundamentos/modelos-de-dados",
+						href: "/docs/guia-video/fundamentos/modelos-de-dados",
 					},
 				],
 			},
 			{
 				title: "Tutoriais",
-				href: "/docs/aprenda/tutoriais",
+				href: "/docs/guia-video/tutoriais",
 				icon: <PenTool className="h-4 w-4" />,
 				children: [
 					{
 						title: "Projeto para iniciantes",
-						href: "/docs/aprenda/tutoriais/iniciantes",
+						href: "/docs/guia-video/tutoriais/iniciantes",
 					},
 					{
 						title: "Aplicação intermediária",
-						href: "/docs/aprenda/tutoriais/intermediario",
+						href: "/docs/guia-video/tutoriais/intermediario",
 					},
 					{
 						title: "Projeto avançado",
-						href: "/docs/aprenda/tutoriais/avancado",
+						href: "/docs/guia-video/tutoriais/avancado",
 					},
-				],
-			},
-			{
-				title: "Vídeo aulas",
-				href: "/docs/aprenda/videos",
-				icon: <Video className="h-4 w-4" />,
-				children: [
-					{ title: "Introdução", href: "/docs/aprenda/videos/introduction" },
-					{
-						title: "Desenvolvimento",
-						href: "/docs/aprenda/videos/development",
-					},
-					{ title: "Casos de uso", href: "/docs/aprenda/videos/case-studies" },
 				],
 			},
 			{
 				title: "Exercícios práticos",
-				href: "/docs/aprenda/exercicios",
+				href: "/docs/guia-video/exercicios",
 				icon: <Code className="h-4 w-4" />,
 				children: [
 					{
 						title: "Nível iniciante",
-						href: "/docs/aprenda/exercicios/beginner",
+						href: "/docs/guia-video/exercicios/beginner",
 					},
 					{
 						title: "Nível intermediário",
-						href: "/docs/aprenda/exercicios/intermediate",
+						href: "/docs/guia-video/exercicios/intermediate",
 					},
 					{
 						title: "Nível avançado",
-						href: "/docs/aprenda/exercicios/advanced",
+						href: "/docs/guia-video/exercicios/advanced",
 					},
 				],
 			},
