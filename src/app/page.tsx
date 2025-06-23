@@ -14,6 +14,7 @@ import {
 	GraduationCap,
 	History,
 	Rocket,
+	TvMinimalPlay,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -115,26 +116,27 @@ export default function Home() {
 						<Card>
 							<CardHeader>
 								<CardTitle className="flex items-center gap-2">
-									<GraduationCap className="h-5 w-5" />
-									<span>Aprenda a usar o APT</span>
+									<TvMinimalPlay className="h-5 w-5" />
+									<span>Guia em Vídeo do Eccox APT</span>
 								</CardTitle>
 								<CardDescription>
-									Tudo que você precisa para dominar o ambiente de testes APT.
+									Aprenda na prática como usar o APT com eficiência.
 								</CardDescription>
 							</CardHeader>
 							<CardContent className="space-y-4">
 								<p>
-									Aprenda com tutoriais, vídeos e exercícios práticos a criar e
-									gerenciar ambientes de testes com o APT.
+									Tutoriais e demonstrações rápidas para testar, isolar e agilizar
+									processos no mainframe usando o Eccox APT.
 								</p>
 								<Button asChild variant="outline" className="w-full">
-									<Link href="/docs/aprenda">
-										<span>Começar Agora</span>
+									<Link href="/docs/guia-video">
+										<span>Assistir Agora</span>
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
 								</Button>
 							</CardContent>
 						</Card>
+
 
 						<Card>
 							<CardHeader>
